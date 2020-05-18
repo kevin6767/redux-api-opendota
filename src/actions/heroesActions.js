@@ -25,6 +25,7 @@ try {
 const response = await fetch('https://api.opendota.com/api/heroStats')
 console.log(response)
 const data = await response.json()
+console.log(data)
 
 store.dispatch(getHeroesSuccess(data))
 } catch (error) {
