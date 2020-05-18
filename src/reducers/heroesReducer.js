@@ -11,7 +11,7 @@ export default function heroesReducer(state = initialState, action) {
         case actions.GET_HEROES:
             return { ...state, loading: true }
         case actions.GET_HEROES_SUCCESS:
-            return { posts: action.payload, loading: false, hasErrors: false }
+            return { heroes: action.payload, loading: false, hasErrors: false }
         case actions.GET_HEROES_FAILURE:
             return { ...state, loading: false, hasErrors: true }
         default:
