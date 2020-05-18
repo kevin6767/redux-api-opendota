@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-d
 
 import Main from './pages/Main'
 import HeroesPage from './pages/HeroesPage'
+import HeroDetail from './pages/HeroDetail'
 
 const App = () => {
     return (
@@ -10,6 +11,7 @@ const App = () => {
             <Switch>
                 <Route exact path="/" component={Main} />
                 <Route exact path="/heroes" component={HeroesPage} />
+                <Route path="/heroes/:heroId" component={HeroDetail} />
                 <Redirect to="/" />
             </Switch>
         </Router>
