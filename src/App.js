@@ -1,8 +1,19 @@
-import React from "react";
+import React from 'react'
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
 
-function App() {
+import Main from './pages/Main'
+import HeroesPage from './pages/HeroesPage'
+
+const App = () => {
     return (
-        <div><h2>Hello world</h2></div>
+        <Router>
+            <Switch>
+                <Route exact path="/" component={Main} />
+                <Route exact path="/heroes" component={HeroesPage} />
+                <Redirect to="/" />
+            </Switch>
+        </Router>
     )
 }
-export default App;
+
+export default App
