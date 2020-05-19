@@ -1,6 +1,6 @@
-_config.yml
-nwb.config.js
-webpack.config.js
+config/_config.yml
+config/nwb.config.js
+config/webpack.config.js
 node_modules
 dist
 .idea

@@ -5,7 +5,7 @@
   "description": "",
   "main": "webpack.config.js",
   "directories": {
-    "doc": "docs"
+    "doc": "../docs"
   },
   "dependencies": {
     "@babel/polyfill": "^7.8.7",
@@ -37,8 +37,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --mode development",
-    "build": "webpack --mode production"
+    "start": "../node_modules/.bin/webpack-dev-server --mode development",
+    "build": "../node_modules/.bin/webpack --mode production"
   },
   "repository": {
     "type": "git",
