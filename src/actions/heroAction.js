@@ -18,7 +18,29 @@ export const getHeroFailure = () => ({
 })
 
 
-export const fetchHero = async() => {
+/*export const fetchHero = async() => {
+    store.dispatch(getHero())
+
+    try {
+        const response = await fetch('https://api.opendota.com/api/heroStats')
+        console.log(response)
+        const data = await response.json()
+        console.log(data)
+
+        store.dispatch(getHeroSuccess(data))
+    } catch (error) {
+        store.dispatch(getHeroFailure())
+    }
+}
+*/
+/*export const fetchHero = (id) => {
+    store.dispatch(getHero())
+    {
+        return fetch(id).then(res => store.dispatch(getHeroSuccess(res)))
+    }
+}
+*/
+export const fetchHero = async () => /*async dispatch =>*/ {
     store.dispatch(getHero())
 
     try {

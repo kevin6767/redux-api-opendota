@@ -1,8 +1,17 @@
 import React from 'react'
-import {Link} from "react-router-dom";
-
+import Card from "react-bootstrap/Card";
 export const Hero = ({ hero }) => (
-    <h2>
-        <Link to={`/heroes/${hero.id}`} > <h2>{hero.localized_name}</h2> </Link>
-    </h2>
+    <Card style={{ width: '18rem' }}>
+        <Card.Img variant="top" src={`https://api.opendota.com${hero.img}`} />
+        <Card.Body>
+            <Card.Title>{hero.localized_name}</Card.Title>
+            <Card.Text>
+                {hero.move_speed}
+            </Card.Text>
+
+        </Card.Body>
+    </Card>
+
 )
+
+//<img src={`https://api.opendota.com${hero.img}`}>
