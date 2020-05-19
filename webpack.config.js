@@ -2,7 +2,7 @@ const path = require("path");
 const webpack = require("webpack");
 
 module.exports = {
-    entry:  ['babel-polyfill', './src/index.js'],
+    entry:  ['./dist/bundle.js'],
     mode: "development",
     module: {
         rules: [
@@ -29,6 +29,5 @@ module.exports = {
         port: 3000,
         publicPath: "http://localhost:3000/dist/",
         hotOnly: true
-    },
-    plugins: [new webpack.HotModuleReplacementPlugin()]
+    }
 };
